@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamarau Global Enterprise - Engineering Excellence, Delivering Quality Solutions Across Nigeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #121110;
+            --color-accent: #c63406;
+            --color-bg: #EEEBE5;
+            --color-text: #141414;
+            --color-surface: #1d1d1d;
+            --color-secondary-accent: #809ea3;
+            --font-display: 'Russo One', sans-serif;
+            --font-body: 'Source Sans 3', sans-serif;
+            --border-radius: 0px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.6;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 2px,
+                rgba(18, 17, 16, 0.02) 2px,
+                rgba(18, 17, 16, 0.02) 4px
+            );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 400;
+            line-height: 1.2;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(238, 235, 229, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 3px solid var(--color-accent);
+            box-shadow: 4px 4px 0 rgba(18, 17, 16, 0.15);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--color-accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-text);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-bg);
+            box-shadow: -4px 4px 0 rgba(18, 17, 16, 0.15);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+            border-left: 3px solid var(--color-accent);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        section {
+            position: relative;
+            z-index: 2;
+        }
+
+        #hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2;
+        }
+
+        .hero-overlay::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 0%, rgba(198, 52, 6, 0.3) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 1200px;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            color: #EEEBE5;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--color-accent);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 3px solid var(--color-accent);
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            transform: translate(2px, 2px);
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        #about {
+            padding: 80px 2rem;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            border: 4px solid var(--color-surface);
+            box-shadow: 8px 8px 0 rgba(18, 17, 16, 0.15);
+        }
+
+        .about-content h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        #services {
+            padding: 80px 2rem;
+            background: var(--color-surface);
+            color: var(--color-bg);
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        .services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .services-container h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--color-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .service-card {
+            background: var(--color-bg);
+            padding: 2rem;
+            border: 3px solid var(--color-accent);
+            box-shadow: 6px 6px 0 rgba(198, 52, 6, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 8px 8px 0 rgba(198, 52, 6, 0.3);
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .service-card p {
+            color: var(--color-text);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        #why-choose-us {
+            padding: 80px 2rem;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        .why-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .why-container h2 {
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--color-primary);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .why-card {
+            background: white;
+            padding: 2rem;
+            border-left: 4px solid var(--color-accent);
+            box-shadow: 4px 4px 0 rgba(18, 17, 16, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 rgba(18, 17, 16, 0.15);
+        }
+
+        .why-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--color-primary);
+        }
+
+        .why-card p {
+            color: var(--color-text);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        #contact {
+            padding: 80px 2rem;
+            background: var(--color-primary);
+            color: var(--color-bg);
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.4s;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: var(--color-bg);
+        }
+
+        .contact-container p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            font-weight: 300;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .contact-item {
+            background: var(--color-surface);
+            padding: 2rem;
+            border: 3px solid var(--color-accent);
+            box-shadow: 6px 6px 0 rgba(198, 52, 6, 0.3);
+        }
+
+        .contact-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+
+        .contact-item p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .contact-item a {
+            color: var(--color-bg);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-accent);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 3px solid #25D366;
+        }
+
+        .whatsapp-float:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            background: var(--color-surface);
+            color: var(--color-bg);
+            text-align: center;
+            padding: 2rem;
+            border-top: 3px solid var(--color-accent);
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.2rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 400px;
+            }
+
+            .about-content h2,
+            .services-container h2,
+            .why-container h2,
+            .contact-container h2 {
+                font-size: 2rem;
+            }
+
+            .services-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #hero,
+            #about,
+            #services,
+            #why-choose-us,
+            #contact {
+                padding: 48px 1.5rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 1024px) and (min-width: 769px) {
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .about-content h2,
+            .services-container h2,
+            .why-container h2,
+            .contact-container h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Tamarau Global</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <img src="https://images.pexels.com/photos/18351354/pexels-photo-18351354.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Tamarau Global Enterprise Manufacturing Facility" class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Tamarau Global Enterprise</h1>
+            <p class="tagline">Engineering Excellence, Delivering Quality Solutions Across Nigeria</p>
+            <p>Welcome to Tamarau Global Enterprise. We are a leading manufacturing company based in Bayelsa State, committed to delivering high-quality products and innovative solutions that meet the diverse needs of Nigerian businesses and industries. With precision engineering and dedicated service, we manufacture excellence.</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <img src="https://images.pexels.com/photos/12550689/pexels-photo-12550689.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Tamarau Global Enterprise Quality Control" class="about-image">
+            <div class="about-content">
+                <h2>About Us</h2>
+                <p>Tamarau Global Enterprise is a trusted manufacturing company operating from the heart of Bayelsa State. We combine technical expertise with a commitment to quality, producing reliable products that serve various sectors across Nigeria. Our facility at Ekeki Estate, Yenagoa, is equipped with modern manufacturing capabilities and staffed by skilled professionals dedicated to excellence. We understand the unique needs of Nigerian businesses and deliver solutions that are both practical and cost-effective. From concept to completion, we maintain the highest standards of quality control and customer service.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Custom Manufacturing</h3>
+                    <p>We produce custom-engineered products designed to your exact specifications, ensuring precision and reliability.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Quality Assurance</h3>
+                    <p>Every product undergoes rigorous quality control testing to meet international standards and exceed customer expectations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Supply Chain Solutions</h3>
+                    <p>We provide seamless supply chain management, ensuring timely delivery of manufactured goods across Nigeria.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Technical Consultation</h3>
+                    <p>Our experienced engineers offer expert consultation to help you select the right manufacturing solutions for your business needs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>After-Sales Support</h3>
+                    <p>We stand behind our products with comprehensive after-sales support and maintenance services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose-us">
+        <div class="why-container">
+            <h2>Why Choose Tamarau Global</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>Local Expertise, Global Standards</h3>
+                    <p>We understand the Nigerian market while maintaining international quality benchmarks.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Proven Track Record</h3>
+                    <p>Years of reliable service to businesses across Bayelsa State and beyond.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Modern Facilities</h3>
+                    <p>Our Yenagoa facility features up-to-date equipment and technology for efficient production.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Skilled Workforce</h3>
+                    <p>Our team of trained professionals ensures every project meets the highest standards.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Competitive Pricing</h3>
+                    <p>We offer excellent value without compromising on quality or service.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Timely Delivery</h3>
+                    <p>We respect your timelines and ensure prompt delivery of all orders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Ready to discuss your manufacturing needs? Get in touch with Tamarau Global Enterprise today. Our team is ready to provide expert guidance and competitive quotes for your project.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>Visit Us</h3>
+                    <p>No C4 Ekeki Estate, Yenagoa, Bayelsa State, Nigeria</p>
+                </div>
+                <div class="contact-item">
+                    <h3>Call Us</h3>
+                    <p><a href="tel:+2348067955998">+234 806 795 5998</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Email Us</h3>
+                    <p><a href="mailto:info@tamarauglobal.com">info@tamarauglobal.com</a></p>
+                </div>
+            </div>
+
+            <p style="margin-top: 2rem;"><strong>Business Hours:</strong> Monday - Friday: 8:00 AM - 5:00 PM | Saturday: 9:00 AM - 2:00 PM</p>
+            <p>Whether you need custom manufacturing solutions, quality products, or technical consultation, Tamarau Global Enterprise is your trusted partner for manufacturing excellence in Nigeria. Contact us today and experience the difference that quality and professionalism make.</p>
+        </div>
+    </section>
+
+    <a href="https://wa.me/2348067955998" class="whatsapp-float" target="_blank" aria-label="Chat on WhatsApp">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="white"><path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.257 1.409 1.409-5.257-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.07 0-7.444 6.056-13.5 13.5-13.5s13.5 6.056 13.5 13.5-6.056 13.5-13.5 13.5zM21.803 18.412c-0.378-0.189-2.236-1.107-2.583-1.234-0.345-0.126-0.597-0.189-0.849 0.189-0.251 0.378-0.975 1.234-1.196 1.486-0.221 0.251-0.441 0.283-0.819 0.094-0.378-0.189-1.596-0.587-3.038-1.872-1.123-1.001-1.881-2.236-2.102-2.614-0.221-0.378-0.024-0.582 0.166-0.771 0.17-0.17 0.378-0.441 0.567-0.662 0.189-0.221 0.251-0.378 0.378-0.631 0.126-0.251 0.063-0.472-0.031-0.662-0.094-0.189-0.849-2.046-1.164-2.803-0.306-0.738-0.617-0.638-0.849-0.65-0.22-0.011-0.472-0.013-0.724-0.013s-0.662 0.094-1.008 0.472c-0.347 0.378-1.325 1.298-1.325 3.167s1.356 3.671 1.545 3.923c0.189 0.251 2.67 4.051 6.469 5.681 0.904 0.378 1.61 0.604 2.16 0.773 0.908 0.283 1.735 0.243 2.388 0.148 0.728-0.108 2.236-0.912 2.551-1.791 0.315-0.881 0.315-1.636 0.221-1.791-0.094-0.157-0.346-0.251-0.724-0.441z"/></svg>
+    </a>
+
+    <footer>
+        <p>&copy; 2024 Tamarau Global Enterprise. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
