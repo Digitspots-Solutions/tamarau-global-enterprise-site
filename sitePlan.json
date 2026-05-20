@@ -1,48 +1,55 @@
 {
-  "businessName": "Tamarau Global Enterprise",
-  "industry": "Manufacturing",
-  "tone": "professional and confident",
-  "tagline": "Engineering Excellence, Delivering Quality Solutions Across Nigeria",
+  "businessName": "Sheba Blum Treasury Technology Co",
+  "industry": "Fintech",
+  "tone": "professional",
+  "tagline": "Secure Corporate Payment Solutions for Modern Nigerian Businesses",
   "sections": [
     {
       "id": "hero",
-      "name": "Hero Section",
-      "copy": "Welcome to Tamarau Global Enterprise. We are a leading manufacturing company based in Bayelsa State, committed to delivering high-quality products and innovative solutions that meet the diverse needs of Nigerian businesses and industries. With precision engineering and dedicated service, we manufacture excellence.",
-      "imagePrompt": "Wide-angle photorealistic shot of a modern Nigerian manufacturing facility with workers in safety gear operating machinery, bright natural lighting streaming through large industrial windows, steel structures and equipment visible, professional industrial atmosphere, shot from an elevated angle showing organized production floor, vibrant and clean environment",
+      "name": "Hero",
+      "copy": "Sheba Blum Treasury Technology Co: Your Trusted Partner in Corporate Payment Solutions. We deliver secure, compliant, and efficient treasury management and payment processing services tailored for Nigerian businesses. With expertise in KYC/AML compliance, we ensure your corporate transactions meet the highest regulatory standards.",
+      "imagePrompt": "Modern Nigerian fintech office with sleek glass surfaces, professional African businesspeople working on laptops showing financial dashboards, secure vault imagery, blue and gold color scheme, corporate Lagos skyline visible through windows, photorealistic, professional lighting, high-tech security elements",
       "layout": "centered"
     },
     {
       "id": "about",
       "name": "About Us",
-      "copy": "Tamarau Global Enterprise is a trusted manufacturing company operating from the heart of Bayelsa State. We combine technical expertise with a commitment to quality, producing reliable products that serve various sectors across Nigeria. Our facility at Ekeki Estate, Yenagoa, is equipped with modern manufacturing capabilities and staffed by skilled professionals dedicated to excellence. We understand the unique needs of Nigerian businesses and deliver solutions that are both practical and cost-effective. From concept to completion, we maintain the highest standards of quality control and customer service.",
-      "imagePrompt": "Professional photograph of a well-organized Nigerian factory floor showing quality control inspection, Nigerian workers in branded uniforms examining manufactured products with precision instruments, bright overhead lighting, clean industrial setting with metal shelving and production equipment in background, corporate color scheme, sharp focus on quality assurance process",
+      "copy": "Sheba Blum Treasury Technology Co (also operating as Sheba Blum Corporate Payments Limited) is a Nigerian fintech company specializing in treasury technology and corporate payment solutions. Founded and led by a certified KYC/AML specialist, we bring deep regulatory expertise to every transaction. Based in Yenagoa, Bayelsa State, we serve businesses across Nigeria with cutting-edge payment processing, treasury management, and compliance services. Our mission is to simplify complex corporate financial operations while maintaining the highest standards of security and regulatory compliance. We understand the unique challenges Nigerian businesses face in managing corporate payments, and we've built our solutions specifically to address these needs.",
+      "imagePrompt": "Professional Nigerian office interior in Bayelsa State, team of diverse African professionals in business attire collaborating around a conference table with financial reports and tablets, modern fintech equipment, Nigerian business district background, warm professional lighting, photorealistic",
       "layout": "split"
     },
     {
       "id": "services",
       "name": "Our Services",
-      "copy": "At Tamarau Global Enterprise, we offer comprehensive manufacturing services tailored to meet your specific requirements:\n\n**Custom Manufacturing**: We produce custom-engineered products designed to your exact specifications, ensuring precision and reliability.\n\n**Quality Assurance**: Every product undergoes rigorous quality control testing to meet international standards and exceed customer expectations.\n\n**Supply Chain Solutions**: We provide seamless supply chain management, ensuring timely delivery of manufactured goods across Nigeria.\n\n**Technical Consultation**: Our experienced engineers offer expert consultation to help you select the right manufacturing solutions for your business needs.\n\n**After-Sales Support**: We stand behind our products with comprehensive after-sales support and maintenance services.",
-      "imagePrompt": "Clean, well-lit collage showing different aspects of Nigerian manufacturing: close-up of precision machining work, warehouse with organized inventory, delivery trucks with company branding, engineers reviewing technical drawings, all in a modern industrial setting with Nigerian context, professional photography style with shallow depth of field",
+      "copy": "Corporate Payment Processing: Streamlined bulk payment solutions for salaries, vendor payments, and business transactions with real-time processing and confirmation.\n\nTreasury Management Solutions: Comprehensive treasury technology to optimize your cash flow, liquidity management, and financial planning.\n\nKYC/AML Compliance Services: Expert Know Your Customer and Anti-Money Laundering compliance management to protect your business and ensure regulatory adherence.\n\nPayment Gateway Integration: Secure API integration for seamless payment processing across your business platforms.\n\nMulti-Currency Support: Handle both Naira and foreign currency transactions with competitive exchange rates and transparent pricing.\n\nCompliance Consulting: Specialized advisory services to help your business navigate Nigeria's evolving fintech regulatory landscape.\n\nFinancial Reporting & Analytics: Detailed transaction reporting and business intelligence tools to inform your financial decisions.",
+      "imagePrompt": "Grid layout showing various fintech services: digital payment terminals, mobile banking apps on Nigerian smartphones, secure data encryption visualization, AML compliance documents with official stamps, treasury management dashboard on computer screens, Nigerian Naira notes and foreign currency, photorealistic, modern business aesthetic",
       "layout": "grid"
     },
     {
       "id": "why-choose-us",
-      "name": "Why Choose Tamarau Global",
-      "copy": "**Local Expertise, Global Standards**: We understand the Nigerian market while maintaining international quality benchmarks.\n\n**Proven Track Record**: Years of reliable service to businesses across Bayelsa State and beyond.\n\n**Modern Facilities**: Our Yenagoa facility features up-to-date equipment and technology for efficient production.\n\n**Skilled Workforce**: Our team of trained professionals ensures every project meets the highest standards.\n\n**Competitive Pricing**: We offer excellent value without compromising on quality or service.\n\n**Timely Delivery**: We respect your timelines and ensure prompt delivery of all orders.",
-      "imagePrompt": "Professional corporate photograph showing diverse Nigerian team of engineers and technicians in a modern manufacturing setting, wearing safety equipment and company-branded workwear, standing confidently in front of industrial machinery, warm lighting, group portrait style with pride and professionalism, Bayelsa State industrial backdrop visible",
+      "name": "Why Choose Sheba Blum",
+      "copy": "Regulatory Expertise: Led by a certified KYC/AML specialist with deep knowledge of Nigerian financial regulations and international compliance standards.\n\nNigerian-Focused Solutions: Purpose-built technology designed specifically for the Nigerian business environment, not adapted foreign systems.\n\nSecurity First: Bank-grade encryption, multi-factor authentication, and continuous security monitoring protect every transaction.\n\nTransparent Pricing: No hidden fees. Clear, competitive rates for all our services with pricing in Naira.\n\nReliable Support: Dedicated Nigerian-based customer support team available to assist your business when you need us.\n\nProven Track Record: Trusted by businesses across Nigeria for secure, compliant corporate payment solutions.\n\nScalable Technology: Whether you're a growing SME or established enterprise, our solutions scale with your business needs.",
+      "imagePrompt": "Split screen showing security shield with Nigerian flag colors, certified compliance badges and official documents, happy Nigerian business owners reviewing financial reports on tablets, modern server infrastructure with security indicators, professional and trustworthy atmosphere, photorealistic",
       "layout": "cards"
     },
     {
       "id": "contact",
-      "name": "Contact Us",
-      "copy": "Ready to discuss your manufacturing needs? Get in touch with Tamarau Global Enterprise today. Our team is ready to provide expert guidance and competitive quotes for your project.\n\n**Visit Us**: No C4 Ekeki Estate, Yenagoa, Bayelsa State, Nigeria\n\n**Call Us**: 0806 795 5998\n\n**Business Hours**: Monday - Friday: 8:00 AM - 5:00 PM | Saturday: 9:00 AM - 2:00 PM\n\nWhether you need custom manufacturing solutions, quality products, or technical consultation, Tamarau Global Enterprise is your trusted partner for manufacturing excellence in Nigeria. Contact us today and experience the difference that quality and professionalism make.",
-      "imagePrompt": "Professional photograph of a modern Nigerian office reception area with comfortable seating, company branding on wall, large windows showing industrial facility exterior, potted plants, clean and welcoming atmosphere, warm natural lighting, professional yet inviting ambiance, Bayelsa State architectural elements subtly incorporated",
+      "name": "Get In Touch",
+      "copy": "Ready to transform your corporate payment operations? Contact Sheba Blum Treasury Technology Co today for a consultation. Our KYC/AML specialists are ready to assess your business needs and recommend the perfect treasury technology solution.\n\nNo C4 Ekeki Estate, Yenagoa, Bayelsa State, Nigeria\n\nCall or WhatsApp: +234 806 795 5998\n\nVisit us at: shebablumsheba.com\n\nBusiness Hours: Monday - Friday, 8:00 AM - 5:00 PM WAT\n\nWhether you need compliance consulting, payment processing setup, or treasury management solutions, we're here to serve your business with professionalism and expertise.",
+      "imagePrompt": "Professional Nigerian fintech office reception area in Yenagoa, welcoming modern space with Sheba Blum branding, African receptionist at sleek desk, comfortable waiting area, large windows showing Nigerian business district, contact information displayed on digital screen, warm inviting lighting, photorealistic",
       "layout": "centered"
+    },
+    {
+      "id": "faq",
+      "name": "Frequently Asked Questions",
+      "copy": "What is KYC/AML and why is it important?\nKnow Your Customer (KYC) and Anti-Money Laundering (AML) are regulatory requirements that protect businesses and the financial system from fraud and illegal activities. Our specialist expertise ensures your business remains fully compliant with Nigerian regulations.\n\nHow quickly can we get started?\nMost businesses can begin processing payments within 3-5 business days after completing our KYC verification process. We'll guide you through every step.\n\nWhat types of businesses do you serve?\nWe work with SMEs, corporations, NGOs, and government contractors across all industries in Nigeria. If you need secure corporate payment processing, we can help.\n\nAre your services CBN-compliant?\nYes. All our solutions are designed to meet Central Bank of Nigeria regulations and international financial standards.\n\nWhat are your transaction limits?\nTransaction limits vary based on your business verification level and needs. Contact us for customized limits that match your business requirements.\n\nDo you charge setup fees?\nOur pricing structure is transparent and tailored to your business size and transaction volume. Contact us for a detailed quote.\n\nCan you integrate with our existing accounting software?\nYes. We offer API integration with most major accounting and ERP systems used in Nigeria.",
+      "imagePrompt": "Clean modern FAQ interface design showing Nigerian business people getting answers, help desk with friendly support staff, digital screens displaying common questions, professional office setting in Nigeria, reassuring and informative atmosphere, photorealistic, warm professional lighting",
+      "layout": "default"
     }
   ],
   "contact": {
     "phone": "+234 806 795 5998",
-    "email": "info@tamarauglobal.com",
+    "email": "info@shebablumsheba.com",
     "address": "No C4 Ekeki Estate, Yenagoa, Bayelsa State, Nigeria",
     "whatsapp": "https://wa.me/2348067955998"
   }
